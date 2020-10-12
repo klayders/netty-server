@@ -1,0 +1,6 @@
+netty:
+  port: 6666
+
+logging:
+  level:
+    root: INFO
