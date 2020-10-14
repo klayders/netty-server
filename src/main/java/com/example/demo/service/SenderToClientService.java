@@ -19,15 +19,15 @@ public class SenderToClientService {
   private static final ObjectMapper objectMapper = new ObjectMapper();
 
 
-  @Scheduled(fixedDelay = 100)
+  @Scheduled(fixedDelay = 1000)
   public void send() throws JsonProcessingException {
     if (!CollectionUtils.isEmpty(CHANNELS)) {
       var ogogo = CHANNELS.get(0);
 
       var message = objectMapper.writeValueAsString(
         Message.of(
-          new Random().nextFloat(),
-          new Random().nextFloat()
+          new Random().nextInt(10),
+          new Random().nextInt(10)
         )
       );
 

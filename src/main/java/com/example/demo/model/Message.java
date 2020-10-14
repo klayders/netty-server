@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor(staticName = "of")
 public class Message {
-    private float x;
-    private float y;
+    private int x;
+    private int y;
 }

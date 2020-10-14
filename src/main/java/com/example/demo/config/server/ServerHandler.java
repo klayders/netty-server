@@ -31,8 +31,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
       var message = objectMapper.writeValueAsString(
         Message.of(
-          new Random().nextFloat(),
-          new Random().nextFloat()
+          new Random().nextInt(10),
+          new Random().nextInt(10)
         )
       );
 
